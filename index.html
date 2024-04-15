@@ -1,71 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandito | Regular Expression</title>
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="icon" href="https://cstmrc3130.notion.site/image/https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F435664%2Ffile-regexp.svg?table=block&id=61079863-1be0-427d-8538-9465fc01797b&spaceId=a280fc8a-b0fc-41ad-836d-fa68f82bb8d7&userId=&cache=v2">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nandito | Regular Expression</title>
+        <link rel="stylesheet" href="src/output.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/base.min.css"
+            rel="stylesheet">
+        <link
+            rel="icon"
+            href="https://cstmrc3130.notion.site/image/https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F435664%2Ffile-regexp.svg?table=block&id=61079863-1be0-427d-8538-9465fc01797b&spaceId=a280fc8a-b0fc-41ad-836d-fa68f82bb8d7&userId=&cache=v2">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
 
-<body class="font-serif">
+    <body class="font-serif transition duration-700 ease-in-out">
 
-    <section class="w-screen h-screen flex justify-center items-center align-center p-6 bg-indigo-50">
-        <div class="rounded-2xl shadow-md w-full h-full bg-white bg-opacity-70 p-5">
-            <h1 class="text-center text-3xl font-medium"> Regular Expression</h1>
-            <div class="grid grid-rows-3 gap-y-12 mt-16">
-                <div class="flex items-center justify-between">
-                    <div class="shadow-md h-36 p-5 w-2/5 rounded-xl bg-indigo-50">
-                        <div>
-                            <p class="mb-2"> URL Test </p>
-                            <input type="text" name="url" id="url" placeholder="Email. . ." autocomplete="off" class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+        <section
+            class="w-screen h-screen flex justify-center items-center align-center p-6 bg-gradient-to-r from-[#FEFAF6] to-[#DAC0A3]">
+            <div class="w-full h-full p-5 rounded-lg shadow-2xl  bg-[#F6F5F2] bg-opacity-35">
+                <h1 class="text-center text-3xl font-medium">
+                    Regular Expression</h1>
+                <div class="grid grid-rows-3 gap-y-12 mt-16">
+                    <div class="flex items-center justify-between">
+                        <div class="shadow-md h-36 por p-5 w-2/5 rounded-xl ">
+                            <div>
+                                <p class="mb-2">
+                                    URL Test
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <input
+                                        type="text"
+                                        name="url"
+                                        id="url"
+                                        autocomplete="off"
+                                        class="min-w-0 flex-auto rounded-md bg-transparent px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                                    <i class="error-icon hidden text-3xl text-red-700">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </i>
+                                    <i class="succses-icon hidden text-3xl te   text-green-700">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    </i>
+                                    <div class="group cursor-help">
+                                        <ion-icon name="help-circle-outline" class="text-3xl text-indigo-800"></ion-icon>
+                                        <div
+                                            class="hidden absolute bg-gray-200 p-5 rounded shadow-lg mt-2 w-80 group-hover:block">
+                                            <h1 class="text-center font-semibold">
+                                                Pengisian URL</h1>
+                                            <p class="text-sm text-justify mt-2 font-extralight">
+                                                Silakan masukkan URL lengkap dengan protokol, seperti
+                                                <span class="font-semibold text-indigo-800">'https://www.contoh.com'</span>. Pastikan Anda menyertakan
+                                                <span class="font-semibold text-indigo-800">'.co' atau '.com'</span>
+                                                di akhir URL agar input dianggap valid.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <article class="leading-none pt-1 text-xs mt-1"></article>
+                            </div>
                         </div>
-                        <p class="leading-none pt-1 text-xs mt-1"></p>
-                    </div>
-                    <div class="shadow-md h-36 p-5 w-2/5 rounded-xl bg-indigo-50">
-                        <div class="font-mono">
-                            <p class="mb-2"> Minimal 10 kata </p>
-                            <input type="text" name="kata" id="kata" placeholder="Masukkan min 10 kata . .   " autocomplete="off" class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                        <div class="shadow-md h-36 por p-5 w-2/5 rounded-xl ">
+                            <div class="font-mono">
+                                <p class="mb-2">
+                                    Minimal 10 kata
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <input
+                                        type="text"
+                                        name="kata"
+                                        id="kata"
+                                        autocomplete="off"
+                                        class="min-w-0 flex-auto rounded-md bg-transparent px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                                    <i class="error-icon hidden text-3xl text-red-700">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </i>
+                                    <i class="succses-icon hidden text-3xl text-green-700">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    </i>
+                                    <div iv="iv" class="group cursor-help">
+                                        <ion-icon name="help-circle-outline" class="text-3xl text-indigo-800"></ion-icon>
+                                        <div
+                                            class="hidden absolute bg-gray-200 p-5 rounded shadow-lg mt-2 right-8 w-80 group-hover:block">
+                                            <h1 class="text-center font-semibold">
+                                                Pengisian Min 10 kata</h1>
+                                            <p class="text-sm text-justify mt-2 font-extralight">
+                                                Harap masukkan setidaknya
+                                                <span class="font-semibold text-indigo-800">sepuluh kata dalam input ini</span>. Mohon pastikan bahwa input Anda memiliki jumlah kata yang memadai.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <article class="leading-none pt-1 text-xs mt-1"></article>
+                            </div>
                         </div>
-                        <p class="leading-none pt-1 text-xs mt-1"></p>
                     </div>
-                </div>
 
-                <div class="flex items-center justify-center">
-                    <div class="shadow-md h-36 p-5 w-2/5 rounded-xl bg-indigo-50">
-                        <div>
-                            <p class="mb-2"> Email Test </p>
-                            <input type="email" name="email" id="email" placeholder="Text Email" autocomplete="off" class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                    <div class="flex items-center justify-center">
+                        <div class="shadow-md h-36 por p-5 w-2/5 rounded-xl ">
+                            <div>
+                                <p class="mb-2">
+                                    Email Test
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        autocomplete="off"
+                                        class="min-w-0 flex-auto rounded-md bg-transparent px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                                    <i class="error-icon hidden text-3xl text-red-700">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </i>
+                                    <i class="succses-icon hidden text-3xl text-green-700">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    </i>
+                                    <div class="group cursor-help">
+                                        <ion-icon name="help-circle-outline" class="text-3xl text-indigo-800"></ion-icon>
+                                        <div
+                                            class="hidden absolute bg-gray-200 p-5 rounded shadow-lg mt-2 w-80 group-hover:block">
+                                            <h1 class="text-center font-semibold">
+                                                Pengisian Email</h1>
+                                            <p class="text-sm text-justify mt-2 font-extralight">
+                                                Silakan masukkan alamat email Anda. Pastikan formatnya benar, seperti
+                                                <span class="font-semibold text-indigo-800">'nama@example.com'.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <article class="leading-none pt-1 text-xs mt-1"></article>
+                            </div>
                         </div>
-                        <p class="leading-none pt-1 text-xs mt-1"></p>
                     </div>
-                </div>
-                
-                <div class="flex justify-between">
-                    <div class="shadow-md h-36 p-5 w-2/5 rounded-xl bg-indigo-50">
-                        <div>
-                            <p class="mb-2"> Password Test </p>
-                            <input type="text" name="pass" id="pass" placeholder="Password . . . " autocomplete="off" class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+
+                    <div class="flex justify-between">
+                        <div class="shadow-md h-36 por p-5 w-2/5 rounded-xl ">
+                            <div>
+                                <p class="mb-2">
+                                    Password Test
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <input
+                                        type="text"
+                                        name="pass"
+                                        id="pass"
+                                        autocomplete="off"
+                                        class="min-w-0 flex-auto rounded-md bg-transparent px-3.5 py-2 text-black border-2 border-slate-400 w-full">
+                                    <i class="error-icon hidden text-3xl text-red-700">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </i>
+                                    <i class="succses-icon hidden text-3xl text-green-700">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    </i>
+                                    <div class="group cursor-help">
+                                        <ion-icon name="help-circle-outline" class="text-3xl text-indigo-800"></ion-icon>
+                                        <div
+                                            class="hidden absolute bg-gray-200 p-5 rounded shadow-lg left-64 bottom-52 w-80 group-hover:block">
+                                            <h1 class="text-center font-semibold">
+                                                Pengisian Password</h1>
+                                            <p class="text-sm text-justify mt-2 font-extralight">
+                                                Mohon masukkan kata sandi Anda. Kata sandi harus terdiri dari
+                                                <span class="font-semibold text-indigo-800">
+                                                    minimal 8 karakter, setidaknya satu huruf besar, satu huruf kecil, satu angka,
+                                                    dan satu karakter istimewa.
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <article class="leading-none pt-1 text-xs mt-1"></article>
+                            </div>
                         </div>
-                        <p class="leading-none pt-1 text-xs mt-1"></p>
-                    </div>
-                    <div class="shadow-md h-36 p-5 w-2/5 rounded-xl bg-indigo-50">
-                        <div>
-                            <p class="mb-2"> Nama Ekstensi File Test </p>
-                            <input type="text" name="file" id="file" placeholder="Masukkan nama File . . . " autocomplete="off" class="flex-auto rounded-md bg-white/5 px-3.5 py-2 text-black border-2 border-slate-400 w-full h-max">
+                        <div class="shadow-md h-36 por p-5 w-2/5 rounded-xl ">
+                            <div>
+                                <p class="mb-2">
+                                    Nama Ekstensi File Test
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <input
+                                        type="text"
+                                        name="file"
+                                        id="file"
+                                        autocomplete="off"
+                                        class="flex-auto rounded-md bg-transparent px-3.5 py-2 text-black border-2 border-slate-400 w-full h-max">
+                                    <i class="error-icon hidden text-3xl text-red-700">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </i>
+                                    <i class="succses-icon hidden text-3xl text-green-700">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    </i>
+                                    <div class="group cursor-help">
+                                        <ion-icon name="help-circle-outline" class="text-3xl text-indigo-800"></ion-icon>
+                                        <div
+                                            class="hidden absolute bg-gray-200 p-5 rounded shadow-lg mt-2 right-8 bottom-52 w-80 group-hover:block">
+                                            <h1 class="text-center font-semibold">
+                                                Nama Ekstensi File Test</h1>
+                                            <p class="text-sm text-justify mt-2 font-extralight">
+                                                Silakan masukkan nama ekstensi file. Pastikan nama ekstensi file yang Anda
+                                                masukkan sesuai dengan format yang diharapkan, seperti<span class="font-semibold text-indigo-800">
+                                                    '.jpg', '.pdf', dll.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <article class="leading-none pt-1 text-xs mt-1"></article>
+                            </div>
                         </div>
-                        <p class="leading-none pt-1 text-xs mt-1"></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-</body>
+        <script
+            src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script
+            nomodule="nomodule"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/lib/index.min.js"></script>
+    </body>
 
 </html>
